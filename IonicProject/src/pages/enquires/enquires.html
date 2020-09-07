@@ -1,0 +1,68 @@
+<!--
+  Generated template for the EnquiresPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+    <ion-navbar>
+  
+        <ion-buttons left>
+            <button ion-button menuToggle>
+            <ion-icon name="menu"></ion-icon>
+            </button>
+        </ion-buttons>
+  
+      <ion-title>
+        Contact Us!
+      </ion-title>
+    </ion-navbar>
+  </ion-header>
+
+<ion-content padding>
+  <div style="padding-left: 50px; padding-right: 50px">
+      <h4>Let us contact you!</h4>
+      <p> For more contact enquires and details, or in regards to booking any of our music courses, please enter your contact details on the form below so that we can contact you!
+        </p>
+
+      <p>
+        If you have already sent in your contact details and you wish to edit it, please click <b>'View Contact Details'</b> to edit. <b>Note: you will be required to authenticate using your entered name and your contact number.</b>
+        </p>
+  </div>
+  <br/>
+
+  <h2 style="padding-left: 50px; padding-right: 50px">Enter your contact details below:</h2>
+  <form [formGroup]="myForm" style="padding-left: 35px; padding-right: 35px">
+    <ion-item>
+     <ion-label floating>Enter your name</ion-label>
+     <ion-input type="text" formControlName="name"
+    name="name"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label floating>Email</ion-label>
+      <ion-input type="text" formControlName="email"
+     name="email"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label floating>Address</ion-label>
+        <ion-input type="text" formControlName="adress"
+       name="address"></ion-input>
+        </ion-item>
+
+    <ion-item>
+     <ion-label floating>Tel. number</ion-label>
+     <ion-input type="text" formControlName="phonenumber"
+    name="phonenumber"></ion-input>
+     </ion-item>
+
+    <br/>
+    <div style="padding-left: 10px">
+     <button ion-button (click)="clickInsert()">Send your contact for enquiry! </button><br/>
+    <button ion-button (click)="viewContact()">Change contact details</button>
+    </div>
+  </form>
+
+    <p>{{msg}}</p>
+</ion-content>

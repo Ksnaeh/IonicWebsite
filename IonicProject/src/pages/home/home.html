@@ -1,0 +1,44 @@
+<ion-header>
+  <ion-navbar>
+
+      <ion-buttons left>
+          <button ion-button menuToggle>
+          <ion-icon name="menu"></ion-icon>
+          </button>
+      </ion-buttons>
+
+    <ion-title>
+      Latest News
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content padding>
+  <div style="padding-left: 50px; padding-right: 50px">
+    <h2>Welcome to the Beats Studio music school</h2>
+
+    <p>
+      Beats Studio is a new music school established in 2019 in Singapore, as we are a music school company, we aim to promote music learning to our students especially in the art of classical music. Nonetheless, we too also promote teaching other musical forms to those who are interested such as pop and rock genre, via our guitar and drum lessons.
+    </p>
+
+    <p>
+      This is the home page which feature the latest music news and recent developments from other musical companies, as well as showcases of musical performance,
+      both local and abroad
+    </p>
+  
+    <p>Feel free to click on any music-related news to read it! Should you wish to check our lessons, our current Beats Studio branches, FAQs and enquiries, please click on the menu bar on the top-left corner.</p>
+  </div>
+  <br/>
+  <ion-list style="padding-left: 40px; padding-right: 40px" *ngFor="let nyheter of news">
+    <ion-card style="border-bottom: 0.3px solid;"
+   (click)="viewNewsDetails(nyheter.NewsTitle, nyheter.NewsDate, nyheter.NewsDesc,nyheter.NewsImage, nyheter.NewsLink)">
+    <ion-card-header><h1><b>{{nyheter.NewsTitle}}</b></h1></ion-card-header>
+      <ion-card-content>
+        <p>Published on: {{nyheter.NewsDate}}</p>
+        <br/>
+        <img src="{{nyheter.NewsImage}}"/>
+      </ion-card-content>
+    </ion-card>
+  </ion-list>
+</ion-content>

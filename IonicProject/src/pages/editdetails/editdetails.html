@@ -1,0 +1,53 @@
+<!--
+  Generated template for the EditdetailsPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <ion-navbar>
+    <ion-title>Edit your particulars</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <div style="padding-left: 50px; padding-right: 50px">
+    <h3>Editing guidelines</h3>
+    <p style="font-weight: bold">Note: you are forbidden to change your name, but you are allowed to change your email, address and phone number. </p>
+    <p style="font-weight: bold"> Should you wish to change your name, we recommend you to delete your contact detail by clicking on the 'delete' button that is located on the bottom of this form, and then enter a new contact detail at the enquiry form.</p>
+    <br/>
+    <p style="font-weight: bold">If you wish to return without saving any changes, please click on the back arrow on the top-left corner of this page, thank you!</p>
+  </div>
+  <br/>
+  <h2 style="padding-left: 50px; padding-right: 50px">Update your contact details below:</h2>
+  <form [formGroup]="this.myForm" style="padding-left: 35px; padding-right: 35px">
+    <ion-item>
+     <ion-label style="color: black">Name</ion-label>
+     <ion-input type="text" formControlName="name"
+    name="name" disabled></ion-input>
+    </ion-item>
+
+    <ion-item>
+        <ion-label style="color: black">Address</ion-label>
+        <ion-input type="text" formControlName="adress"
+       name="adress" ></ion-input>
+    </ion-item>
+
+    <ion-item>
+     <ion-label style="color: black">Email</ion-label>
+     <ion-input type="text" formControlName="email"
+    name="email" ></ion-input>
+     </ion-item>
+
+     <ion-item>
+      <ion-label style="color: black">Phone number</ion-label>
+      <ion-input type="text" formControlName="phonenumber"
+     name="phonenumber"></ion-input>
+      </ion-item>
+    <br/>
+    <div style="padding-left: 10px;">
+     <button ion-button (click)="clickUpdate()">Save edited details</button>
+    <button ion-button (click)="clickDelete()">Delete</button>
+    </div>
+  </form>
+</ion-content>

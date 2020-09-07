@@ -1,0 +1,35 @@
+<ion-menu side="left" [content]="content">
+    <ion-header>
+        <ion-toolbar>
+            <ion-title>Menu</ion-title>
+        </ion-toolbar>
+    </ion-header>
+
+    <ion-content>
+        <ion-list>
+            <ion-item (click)="go_to_home()" menuClose>
+            Home / News page
+            </ion-item>
+
+            <ion-item (click)="go_to_courses()" menuClose>
+            Courses
+            </ion-item>
+            
+
+            <ion-item (click)="go_to_locations()" menuClose>
+            Our branches
+            </ion-item>
+
+            <ion-item (click)="go_to_faq()" menuClose>
+            FAQ
+            </ion-item>
+
+            <ion-item (click)="go_to_enquires()" menuClose>
+            Contact us!
+            </ion-item>
+
+        </ion-list>
+    </ion-content>
+   </ion-menu>
+
+<ion-nav [root]="rootPage" #content></ion-nav>
